@@ -1,0 +1,283 @@
+
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+
+/* CSS Variables */
+
+:root {
+  --primary-font: "Source Sans 3", sans-serif;
+  --secondary-font: "Merriweather", serif;
+  --primary-color: #4a4a4a;
+  /*charcoal*/
+  --secondary-color: #f4e1e4;
+  /*soft pink*/
+  --highlight-color: #b76e79;
+  /*dusty rose*/
+  --light-highlight-color: #adc2b2;
+  /*sage-green*/
+  --non-white-backgrounds: #f2ece8;
+  /*off-white*/
+}
+
+/* -----------------------------------------------Global Styles */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--primary-font);
+  /*pushes the content down under the navbar, which is fixed to the top.
+  Adjusted for the shorter navbar on mobile view*/
+  padding-top: 67px;
+}
+
+body>footer {
+  position: sticky;
+  top: 100%;
+}
+
+/*stabilizes width, prevents layout from expanding*/
+main {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*Global box sizing reset, prevents padding-caused overflow*/
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--secondary-font);
+  color: var(--highlight-color);
+}
+
+/* ----------------------------------------------------Navbar */
+
+#navbar {
+  background-color: var(--non-white-backgrounds);
+  -webkit-box-shadow: 0 1px 6px var(--primary-color);
+  box-shadow: 0 1px 6px var(--primary-color);
+}
+
+/* -----------------------------------------------Main Content */
+
+/* -------------------------------------------------Hero Section */
+
+#hero {
+  background: url(../images/hero.webp);
+  background-color: #adc2b2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 70vh;
+}
+
+/*Creates a layered white shadow to make the headings more readalbe*/
+#hero h1,
+#hero h2 {
+  /*1st line, closer to the letters, innerglow, defines the letter's edge.
+  2nd line, outer glow, spreads wider, fades softly, blends into the photo*/
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(255, 255, 255, 0.6);
+}
+
+#hero h1 {
+  margin-top: 5rem;
+}
+
+#hero h2 {
+  margin-bottom: 3rem;
+}
+
+.hero-text {
+  font-size: large;
+  font-family: var(--secondary-font);
+}
+
+.custom-button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+.custom-button:hover {
+  background-color: var(--light-highlight-color);
+}
+
+/* ---------------------------------------------------------------Service cards on home page */
+
+#services-home {
+  background: #faf4f0;
+}
+
+#services-home h3 {
+  color: var(--highlight-color);
+}
+
+.card {
+  border: none;
+  /*removes the extra left and right padding created by the card class. The div inside already has enough padding for the content*/
+  padding: 0;
+  border-radius: 0;
+  /*offset-x offset-y blur-radius color*/
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+  /* ensures all card buttons line up */
+  min-height: 185px;
+}
+
+.card-footer {
+  background: transparent;
+  border-top: 0;
+}
+
+.card-link {
+  color: var(--primary-color);
+}
+
+.card-link:hover {
+  color: white;
+  background-color: var(--light-highlight-color);
+  border: none;
+}
+
+
+/* ------------------------------------------------------About Me preview on Home Page */
+
+#about-me-home {
+  background-color: var(--secondary-color);
+  padding-top: 10px;
+}
+
+#doula-home-pic {
+  border: 2px solid var(--light-highlight-color);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 300px;
+}
+
+#about-preview-text {
+  padding-top: 10px;
+}
+
+#about-preview-text p {
+  padding: 10px;
+}
+
+/*---------------------------------------------------Featured section on home page*/
+
+#featured {
+  padding: 2rem 0;
+}
+
+/* -----------------------------------------------------------Services Page */
+
+.service-section {
+  /*makes sure the content of each service section isn't hidden behind the fixed navbar when linking from the home page cards*/
+  scroll-margin-top: 67px;
+}
+
+
+.services-picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--light-highlight-color);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-section li::marker {
+  /*Replaces the bullet point in the lists with a unicode flower, ::marker is a pseudo element*/
+  content: "\2740";
+  color: var(--light-highlight-color);
+}
+
+/* ---------------------------------------------------About Me Page*/
+
+#doula-bio-pic {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--light-highlight-color);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#my-story {
+  background: #faf4f0;
+  margin-top: 2rem;
+}
+
+#credentials li::marker {
+  /*Replaces the bullet point in the lists with a unicode flower, ::marker is a pseudo element*/
+  content: "\2740";
+  color: var(--light-highlight-color);
+}
+
+/* -----------------------------------------------------------------Footer */
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 1.5rem;
+  background-color: var(--non-white-backgrounds);
+  -webkit-box-shadow: 0 -1px 6px var(--primary-color);
+  box-shadow: 0 -1px 6px var(--primary-color);
+}
+
+.footer a {
+  color: var(--highlight-color);
+  font-size: 1.5rem;
+}
+
+.footer a:hover {
+  color: var(--light-highlight-color);
+}
+
+/* ----------------------------------------------------------------------------Media Queries */
+
+/* Medium devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px) {
+  #doula-home-pic {
+    min-height: 400px;
+  }
+}
+
+/* Extra large devices( laptops, 1200px and up*/
+
+@media screen and (min-width: 1200px) {
+  .card-body {
+    /* ensures all card buttons line up */
+    min-height: 200px;
+  }
+}
+
+/* XXL devices (Desktops, 1400px and up) */
+
+@media screen and (min-width: 1400px) {
+  #doula-home-pic {
+    max-height: 400px;
+  }
+}
+
