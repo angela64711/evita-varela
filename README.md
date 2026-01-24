@@ -1,5 +1,5 @@
 ﻿
-# [Evita Varela](https://angela64711.github.io/Evita-Varela)
+# [Evita Varela](https://angela64711.github.io/evita-varela)
 
 Developer: Angeliki Kyratzidou ([angela64711](https://www.github.com/angela64711))
 
