@@ -1,13 +1,7 @@
 ﻿
-# [first-milestone-project](https://angela64711.github.io/first-milestone-project)
+# [Evita Varela](https://angela64711.github.io/Evita-Varela)
 
 Developer: Angeliki Kyratzidou ([angela64711](https://www.github.com/angela64711))
-
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/angela64711/first-milestone-project)](https://www.github.com/angela64711/first-milestone-project/commits/main)
-[![GitHub last commit](https://img.shields.io/github/last-commit/angela64711/first-milestone-project)](https://www.github.com/angela64711/first-milestone-project/commits/main)
-[![GitHub repo size](https://img.shields.io/github/repo-size/angela64711/first-milestone-project)](https://www.github.com/angela64711/first-milestone-project)
-[![badge](https://img.shields.io/badge/deployment-GitHub_Pages-purple)](https://angela64711.github.io/first-milestone-project)
-
 
 ## Project Overview
 
