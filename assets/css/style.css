@@ -7,16 +7,18 @@
 :root {
   --primary-font: "Source Sans 3", sans-serif;
   --secondary-font: "Merriweather", serif;
-  --primary-color: #4a4a4a;
-  /*charcoal*/
-  --secondary-color: #f4e1e4;
-  /*soft pink*/
-  --highlight-color: #b76e79;
-  /*dusty rose*/
-  --light-highlight-color: #adc2b2;
-  /*sage-green*/
-  --non-white-backgrounds: #f2ece8;
-  /*off-white*/
+  --primary-color: #3a335c;
+  /*dark purple for text*/
+  --secondary-color: #5e39a7 ; /*#62568a*/
+  /*dusty grape*/
+  --highlight-color: #a085d5;
+  /*bright purple*/
+  --light-highlight-color: #bfcfc6;
+  /*sage*/
+  --off-white-backgrounds: #f4f7f5;
+  /*lighter tint than the sage*/
+  --light-purple-backgrounds: #e2cff0;
+  /*lavender*/
 }
 
 /* -----------------------------------------------Global Styles */
@@ -31,6 +33,15 @@ body {
   /*pushes the content down under the navbar, which is fixed to the top.
   Adjusted for the shorter navbar on mobile view*/
   padding-top: 67px;
+}
+
+/*overrides the default black text by bootstrap*/
+p,
+li,
+label,
+input,
+textarea {
+  color: var(--primary-color);
 }
 
 body>footer {
@@ -58,15 +69,49 @@ h2,
 h3,
 h4 {
   font-family: var(--secondary-font);
-  color: var(--highlight-color);
+  color: var(--secondary-color);
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.4rem 1.1rem;
 }
 
 /* ----------------------------------------------------Navbar */
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding-top: 0.1rem;
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.02em;
+}
+
 #navbar {
-  background-color: var(--non-white-backgrounds);
+  background-color: var(--light-highlight-color);
   -webkit-box-shadow: 0 1px 6px var(--primary-color);
   box-shadow: 0 1px 6px var(--primary-color);
+}
+
+.nav-link {
+  font-family: var(--primary-font);
+  color: var(--secondary-color);
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+  font-weight: 400; /* or inherit */
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.navbar .nav-link.active {
+  color: var(--secondary-color);
+  font-weight: 400; /* or inherit */
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 /* -----------------------------------------------Main Content */
@@ -74,8 +119,9 @@ h4 {
 /* -------------------------------------------------Hero Section */
 
 #hero {
+  position: relative;
   background: url(../images/hero.webp);
-  background-color: #adc2b2;
+  background-color: var(--light-highlight-color);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -88,8 +134,8 @@ h4 {
 #hero h2 {
   /*1st line, closer to the letters, innerglow, defines the letter's edge.
   2nd line, outer glow, spreads wider, fades softly, blends into the photo*/
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9),
-    0 0 16px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1),
+    0 0 16px rgba(255, 255, 255, 0.8);
 }
 
 #hero h1 {
@@ -103,26 +149,30 @@ h4 {
 .hero-text {
   font-size: large;
   font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1),
+    0 0 16px rgba(255, 255, 255, 0.8);
 }
 
 .custom-button {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--highlight-color);
+  
   border: none;
 }
 
 .custom-button:hover {
   background-color: var(--light-highlight-color);
+  color: var(--highlight-color);
 }
 
 /* ---------------------------------------------------------------Service cards on home page */
 
 #services-home {
-  background: #faf4f0;
+  background: var(--off-white-backgrounds); /*lighter tint than the sage*/
 }
 
 #services-home h3 {
-  color: var(--highlight-color);
+  color: var(--secondary-color); 
 }
 
 .card {
@@ -140,20 +190,25 @@ h4 {
 }
 
 .card-link {
-  color: var(--primary-color);
+  color: var(--highlight-color);
+  border: 1.5px solid var(--highlight-color);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
 }
 
-.card-link:hover {
+.card-link:hover,
+.card-link:focus {
   color: white;
-  background-color: var(--light-highlight-color);
-  border: none;
+  background-color: var(--highlight-color);
+  border: var(--highlight-color);
 }
 
 
 /* ------------------------------------------------------About Me preview on Home Page */
 
 #about-me-home {
-  background-color: var(--secondary-color);
+  background-color: var(--light-purple-backgrounds);
   padding-top: 10px;
 }
 
@@ -212,7 +267,7 @@ h4 {
 }
 
 #my-story {
-  background: #faf4f0;
+  background: var(--non-white-backgrounds);
   margin-top: 2rem;
 }
 
@@ -233,18 +288,18 @@ h4 {
   justify-content: center;
   padding: 1rem 0;
   gap: 1.5rem;
-  background-color: var(--non-white-backgrounds);
+  background-color: var(--secondary-color);
   -webkit-box-shadow: 0 -1px 6px var(--primary-color);
   box-shadow: 0 -1px 6px var(--primary-color);
 }
 
 .footer a {
-  color: var(--highlight-color);
+  color: var(--light-highlight-color);
   font-size: 1.5rem;
 }
 
 .footer a:hover {
-  color: var(--light-highlight-color);
+  color: var(--highlight-color);
 }
 
 /* ----------------------------------------------------------------------------Media Queries */
