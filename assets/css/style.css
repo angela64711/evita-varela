@@ -13,9 +13,9 @@
   /*dusty grape*/
   --highlight-color: #a085d5;
   /*bright purple*/
-  --light-highlight-color: #bfcfc6;
+  --light-highlight-color: #bfcfc6; 
   /*sage*/
-  --off-white-backgrounds: #f4f7f5;
+  --off-white-backgrounds: #edf4ed;
   /*lighter tint than the sage*/
   --light-purple-backgrounds: #e2cff0;
   /*lavender*/
@@ -32,7 +32,7 @@ body {
   font-family: var(--primary-font);
   /*pushes the content down under the navbar, which is fixed to the top.
   Adjusted for the shorter navbar on mobile view*/
-  padding-top: 67px;
+  padding-top: 64px;
 }
 
 /*overrides the default black text by bootstrap*/
@@ -79,7 +79,7 @@ h4 {
 
 /* ----------------------------------------------------Navbar */
 
-.navbar-brand {
+.navbar-name {
   display: flex;
   align-items: center;
   line-height: 1;
@@ -112,6 +112,23 @@ h4 {
   font-weight: 400; /* or inherit */
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+
+.navbar-toggler-icon-custom {
+    font-size: 1.5rem;      /* icon size */
+    color: var(--secondary-color);         /* your purple */
+    transition: transform 0.3s ease; /* optional for smooth rotation if desired */
+}
+
+.navbar-toggler {
+    border: none;          /* removes the border */
+    background: none;      /* removes background color */
+    box-shadow: none; 
+}
+
+.navbar-toggler:focus {
+    outline: none;       /* removes the default focus border */
+    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.3); /* soft purple glow */;    /* removes any Bootstrap shadow */
 }
 
 /* -----------------------------------------------Main Content */
@@ -201,7 +218,7 @@ h4 {
 .card-link:focus {
   color: white;
   background-color: var(--highlight-color);
-  border: var(--highlight-color);
+  border: 1.5px solid var(--highlight-color);
 }
 
 
@@ -227,6 +244,15 @@ h4 {
   padding: 10px;
 }
 
+#about-preview-text a {
+  color: var(--secondary-color);
+}
+
+#about-preview-text a:hover {
+  background-color: var(--light-highlight-color);
+  border: 1.5px solid var(--secondary-color);
+}
+
 /*---------------------------------------------------Featured section on home page*/
 
 #featured {
@@ -237,7 +263,7 @@ h4 {
 
 .service-section {
   /*makes sure the content of each service section isn't hidden behind the fixed navbar when linking from the home page cards*/
-  scroll-margin-top: 67px;
+  scroll-margin-top: 64px;
 }
 
 
@@ -267,7 +293,7 @@ h4 {
 }
 
 #my-story {
-  background: var(--non-white-backgrounds);
+  background: var(--off-white-backgrounds);
   margin-top: 2rem;
 }
 
@@ -275,6 +301,12 @@ h4 {
   /*Replaces the bullet point in the lists with a unicode flower, ::marker is a pseudo element*/
   content: "\2740";
   color: var(--light-highlight-color);
+}
+
+/*-----------------------------------------------------Contact Page*/
+
+#contact {
+  background-color: var(--off-white-backgrounds);
 }
 
 /* -----------------------------------------------------------------Footer */
