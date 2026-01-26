@@ -1,19 +1,20 @@
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Calligraffitti&family=Merienda:wght@300..900&family=Shadows+Into+Light+Two&family=Solitreo&display=swap');
 
 /* CSS Variables */
 
 :root {
   --primary-font: "Source Sans 3", sans-serif;
-  --secondary-font: "Merriweather", serif;
+  --secondary-font: "Solitreo", cursive;
   --primary-color: #3a335c;
   /*dark purple for text*/
-  --secondary-color: #5e39a7 ; /*#62568a*/
+  --secondary-color: #5e39a7;
+  /*#62568a*/
   /*dusty grape*/
-  --highlight-color: #a085d5;
-  /*bright purple*/
-  --light-highlight-color: #bfcfc6; 
+  --highlight-color: #faf4f0;
+  /*soft blush*/
+  --light-highlight-color: #bfcfc6;
   /*sage*/
   --off-white-backgrounds: #edf4ed;
   /*lighter tint than the sage*/
@@ -41,7 +42,7 @@ li,
 label,
 input,
 textarea {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 body>footer {
@@ -90,7 +91,7 @@ h4 {
 }
 
 #navbar {
-  background-color: var(--light-highlight-color);
+  background-color: var(--off-white-backgrounds);
   -webkit-box-shadow: 0 1px 6px var(--primary-color);
   box-shadow: 0 1px 6px var(--primary-color);
 }
@@ -102,57 +103,77 @@ h4 {
 
 .nav-link:hover {
   color: var(--secondary-color);
-  font-weight: 400; /* or inherit */
+  font-weight: 400;
+  /* or inherit */
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
 .navbar .nav-link.active {
   color: var(--secondary-color);
-  font-weight: 400; /* or inherit */
+  font-weight: 400;
+  /* or inherit */
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
 .navbar-toggler-icon-custom {
-    font-size: 1.5rem;      /* icon size */
-    color: var(--secondary-color);         /* your purple */
-    transition: transform 0.3s ease; /* optional for smooth rotation if desired */
+  font-size: 1.5rem;
+  /* icon size */
+  color: var(--secondary-color);
+  /* your purple */
+  transition: transform 0.3s ease;
+  /* optional for smooth rotation if desired */
 }
 
 .navbar-toggler {
-    border: none;          /* removes the border */
-    background: none;      /* removes background color */
-    box-shadow: none; 
+  border: none;
+  /* removes the border */
+  background: none;
+  /* removes background color */
+  box-shadow: none;
 }
 
 .navbar-toggler:focus {
-    outline: none;       /* removes the default focus border */
-    box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.3); /* soft purple glow */;    /* removes any Bootstrap shadow */
+  outline: none;
+  /* removes the default focus border */
+  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.3);
+  /* soft purple glow */
+  ;
+  /* removes any Bootstrap shadow */
 }
 
 /* -----------------------------------------------Main Content */
 
 /* -------------------------------------------------Hero Section */
 
+
+#hero-content {
+  max-width: 580px;
+  /* anywhere 560–620 is fine */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
 #hero {
   position: relative;
-  background: url(../images/hero.webp);
+  background: url(../images/hero1.webp);
   background-color: var(--light-highlight-color);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left bottom;
   width: 100%;
   min-height: 70vh;
 }
 
-/*Creates a layered white shadow to make the headings more readalbe*/
-#hero h1,
-#hero h2 {
-  /*1st line, closer to the letters, innerglow, defines the letter's edge.
-  2nd line, outer glow, spreads wider, fades softly, blends into the photo*/
-  text-shadow: 0 0 8px rgba(255, 255, 255, 1),
-    0 0 16px rgba(255, 255, 255, 0.8);
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
 }
 
 #hero h1 {
@@ -167,13 +188,10 @@ h4 {
   font-size: large;
   font-family: var(--secondary-font);
   color: var(--secondary-color);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 1),
-    0 0 16px rgba(255, 255, 255, 0.8);
 }
 
 .custom-button {
-  background-color: var(--highlight-color);
-  
+  background-color: var(--secondary-color);
   border: none;
 }
 
@@ -185,11 +203,12 @@ h4 {
 /* ---------------------------------------------------------------Service cards on home page */
 
 #services-home {
-  background: var(--off-white-backgrounds); /*lighter tint than the sage*/
+  background: var(--off-white-backgrounds);
+  /*lighter tint than the sage*/
 }
 
 #services-home h3 {
-  color: var(--secondary-color); 
+  color: var(--secondary-color);
 }
 
 .card {
@@ -207,8 +226,8 @@ h4 {
 }
 
 .card-link {
-  color: var(--highlight-color);
-  border: 1.5px solid var(--highlight-color);
+  color: var(--secondary-color);
+  border: 1.5px solid var(--secondary-color);
   font-weight: 500;
   letter-spacing: 0.04em;
   transition: all 0.2s ease;
@@ -217,31 +236,38 @@ h4 {
 .card-link:hover,
 .card-link:focus {
   color: white;
-  background-color: var(--highlight-color);
-  border: 1.5px solid var(--highlight-color);
+  background-color: var(--secondary-color);
+  border: 1.5px solid var(--secondary-color);
 }
 
 
 /* ------------------------------------------------------About Me preview on Home Page */
 
 #about-me-home {
-  background-color: var(--light-purple-backgrounds);
-  padding-top: 10px;
+  background-color: var(--highlight-color);
+  padding: 2rem 0;
 }
 
 #doula-home-pic {
   border: 2px solid var(--light-highlight-color);
   -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  height: 300px;
+  max-height: 350px;
+  height: auto;
 }
 
 #about-preview-text {
-  padding-top: 10px;
+  padding-left: 2rem;
+}
+
+#about-preview-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #about-preview-text p {
-  padding: 10px;
+  margin-bottom: 1rem;
+  line-height: 1.7;
 }
 
 #about-preview-text a {
@@ -249,7 +275,8 @@ h4 {
 }
 
 #about-preview-text a:hover {
-  background-color: var(--light-highlight-color);
+  color: var(--highlight-color);
+  background-color: var(--secondary-color);
   border: 1.5px solid var(--secondary-color);
 }
 
@@ -293,7 +320,7 @@ h4 {
 }
 
 #my-story {
-  background: var(--off-white-backgrounds);
+  background: var(--highlight-color);
   margin-top: 2rem;
 }
 
@@ -320,13 +347,13 @@ h4 {
   justify-content: center;
   padding: 1rem 0;
   gap: 1.5rem;
-  background-color: var(--secondary-color);
+  background-color: var(--light-highlight-color);
   -webkit-box-shadow: 0 -1px 6px var(--primary-color);
   box-shadow: 0 -1px 6px var(--primary-color);
 }
 
 .footer a {
-  color: var(--light-highlight-color);
+  color: var(--secondary-color);
   font-size: 1.5rem;
 }
 
