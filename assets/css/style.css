@@ -288,19 +288,49 @@ h4 {
 
 /* -----------------------------------------------------------Services Page */
 
+#services p,
+.service-section p {
+  line-height: 1.6;  
+  margin-bottom: 1.5rem;
+}
+
 .service-section {
   /*makes sure the content of each service section isn't hidden behind the fixed navbar when linking from the home page cards*/
   scroll-margin-top: 64px;
+  
+  align-items: center;
+   /* spacing between text and image */
 }
 
+.service-text {
+  flex: 1;
+}
 
 .services-picture {
   max-width: 100%;
+  padding: 0;
+  position: relative;
   height: auto;
   display: block;
   border: 2px solid var(--light-highlight-color);
   -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-picture img {
+  filter: grayscale(100%); /* keep it grayscale */
+}
+
+.service-title-overlay {
+  position: absolute;
+  bottom: 10%; /* 10% from the bottom of the image */
+  left: 50%; /* horizontally center */
+  transform: translateX(-50%);
+  font-size: clamp(3rem, 10vw, 5rem); /*lets the font scale between a minimum and maximum depending on the viewport width*/
+  color: white; 
+  font-weight: bold;
+  text-transform: uppercase; 
+  z-index: 10;
 }
 
 .service-section li::marker {
