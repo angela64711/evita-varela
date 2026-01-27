@@ -181,6 +181,11 @@
   </main>
   <!-- Footer / Social Media Links -->
   <footer class="footer container-fluid">
+    <!-- Button trigger modal -->
+    <button type="button" id="modal-button" class="btn btn-secondary custom-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      FAQs
+    </button>
+
     <a target="_blank" href="https://www.facebook.com/evita.varela.5" rel="noopener"
       aria-label="find me on Facebook (opens in a new tab)">
       <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -190,6 +195,28 @@
       <i class="fab fa-instagram" aria-hidden="true"></i>
     </a>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Your questions
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary custom-button " data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--Bootstrap5 JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

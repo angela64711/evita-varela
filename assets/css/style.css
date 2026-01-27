@@ -391,6 +391,10 @@ h4 {
   color: var(--highlight-color);
 }
 
+#modal-button:hover {
+  background-color: var(--highlight-color);
+  color: var(--secondary-color);
+}
 /* ----------------------------------------------------------------------------Media Queries */
 
 /* Medium devices (tablets, 768px and up) */
