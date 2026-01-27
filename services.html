@@ -37,13 +37,13 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="services.html">Services</a>
+            <a class="nav-link ms-2 active" aria-current="page" href="services.html">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Me</a>
+            <a class="nav-link ms-2" href="about.html">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link ms-2" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -110,7 +110,7 @@
               <li>Postpartum preparation, including breastfeeding guidance</li>
               <li>Optional fascia touch for comfort and optimal baby positioning</li>
             </ul>
-            <a class="btn btn-secondary custom-button" href="contact.html">Get in touch</a>
+            <a class="btn btn-secondary custom-button ms-4" href="contact.html">Get in touch</a>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
               <li>Continuous presence until 1 to 2 hours after birth</li>
               <li>Support during initial breastfeeding</li>
             </ul>
-            <a class="btn btn-secondary custom-button" href="contact.html">Get in touch</a>
+            <a class="btn btn-secondary custom-button ms-4" href="contact.html">Get in touch</a>
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@
               <li>Caring for your baby so you can rest, shower or take time for yourself</li>
               <li>Light household help and nourishment support when needed</li>
             </ul>
-            <a class="btn btn-secondary custom-button" href="contact.html">Get in touch</a>
+            <a class="btn btn-secondary custom-button ms-4" href="contact.html">Get in touch</a>
           </div>
         </div>
       </div>
@@ -201,15 +201,15 @@
               <li>Space to explore emotions, fears and hopes without judgment</li>
               <li>Unlimited phone and SMS support during the accompaniment period</li>
             </ul>
-            <a class="btn btn-secondary custom-button" href="contact.html">Get in touch</a>
+            <a class="btn btn-secondary custom-button ms-4" href="contact.html">Get in touch</a>
           </div>
         </div>
       </div>
     </section>
-    <hr>
-    <section id="packages" class="container">
+    
+    <section id="packages" class="container-fluid ps-4">
       <div class="row">
-        <div class="col-12 text-center mb-3">
+        <div class="col-12 text-center mt-3 mb-3">
           <h2>Packages</h2>
         </div>
         <div class="col-12 col-lg-6">
@@ -243,18 +243,153 @@
     </section>
   </main>
 
-  <!-- Footer / Social Media Links -->
-  <footer class="footer">
+  <!-- Footer / FAQs + Social Media Links -->
+  <footer class="footer container-fluid  px-4 px-md-4 px-lg-5">
+    <div class="row align-items-center justify-content-between">
+    <!-- Button trigger modal -->
+     <div class="col-auto">
+    <button type="button" id="modal-button" class="btn btn-secondary custom-button" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop">
+      FAQs
+    </button>
+    </div>
+    <div class="col-auto d-flex gap-3">
     <a target="_blank" href="https://www.facebook.com/evita.varela.5" rel="noopener"
       aria-label="find me on Facebook (opens in a new tab)">
       <i class="fab fa-facebook-f" aria-hidden="true"></i>
     </a>
-
     <a target="_blank" href="https://www.instagram.com/evita.varela.doula/" rel="noopener"
       aria-label="find me on Instagram (opens in a new tab)">
       <i class="fab fa-instagram" aria-hidden="true"></i>
     </a>
+    </div>
+    </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="staticBackdropLabel">Your questions, answered</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- ACCORDION STARTS HERE -->
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqOne">
+                  How do I work alongside midwives and doctors in Germany?
+                </button>
+              </h3>
+              <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>I work alongside your medical care, never instead of it.</p>
+                  <p>
+                    In Germany, your pregnancy and birth care are led by midwives and, when needed, doctors or hospital
+                    teams. As a doula, my role is to offer continuous emotional, physical, and informational support —
+                    helping you feel calm, heard, and supported throughout the process.
+                  </p>
+                  <p>
+                    I collaborate respectfully with midwives and medical staff and can support births in hospitals,
+                    birth centers, or at home in Berlin.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqTwo">
+                  When should I book a doula?
+                </button>
+              </h3>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>Many families choose to contact me during the second trimester, often between weeks 16 and 24. This
+                    gives us time to get to know each other and prepare for birth without pressure.</p>
+                  <p>
+                    Support can begin at different stages: during pregnancy, during birth or in the postpartum period
+                    Some people reach out later in pregnancy or specifically for postpartum support. You’re always
+                    welcome to ask — we can see together what feels right and what’s possible.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqThree">
+                  Is doula support covered by health insurance in Germany?
+                </button>
+              </h3>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>In Germany, doula support is generally not covered by public health insurance (gesetzliche
+                    Krankenkasse).</p>
+                  <p>
+                    My work is considered non-medical support and is usually self-paid. Some private or supplementary
+                    insurance plans may reimburse parts of the cost, but this varies from provider to provider.
+                  </p>
+                  <p>
+                    If reimbursement is important to you, I recommend checking directly with your insurance company for
+                    clarity.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqFour">
+                  Do I need paperwork or referrals to work with a doula?
+                </button>
+              </h3>
+              <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>No — you can contact and book a doula directly. You don’t need a referral from a doctor, approval
+                    from your midwife or approval from your insurance</p>
+                  <p>
+                    If you decide to ask your insurance about possible reimbursement, they may request an invoice. This
+                    depends on the provider, and I’m happy to explain how that usually works.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqFive">
+                  What do I do and what don’t I do, as a doula?
+                </button>
+              </h3>
+              <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <p>As a doula, I offer emotional and physical support, help you prepare and feel informed, support
+                    communication and decision-making, provide a calm, steady presence.</p>
+                  <p>
+                    I do not provide medical care, perform examinations or procedures, replace midwives or doctors,
+                    replace midwives or doctors.
+                  </p>
+                  <p>
+                    This clear separation allows everyone involved to focus on their role, while you feel supported and
+                    cared for.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ACCORDION ENDS HERE -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary custom-button " data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--Bootstrap5 JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

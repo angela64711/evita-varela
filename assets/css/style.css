@@ -34,7 +34,7 @@ body {
   font-family: var(--primary-font);
   /*pushes the content down under the navbar, which is fixed to the top.
   Adjusted for the shorter navbar on mobile view*/
-  padding-top: 64px;
+  padding-top: 60px;
 }
 
 /*overrides the default black text by bootstrap*/
@@ -72,6 +72,22 @@ h3,
 h4 {
   font-family: var(--secondary-font);
   color: var(--secondary-color);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* min, preferred, max */
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.75rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .btn {
@@ -186,7 +202,6 @@ h4 {
 }
 
 .hero-text {
-  font-size: large;
   font-family: var(--secondary-font);
   color: var(--secondary-color);
 }
@@ -336,6 +351,11 @@ h4 {
   font-weight: bold;
   text-transform: uppercase;
   z-index: 10;
+  text-shadow: 
+    1px 1px 2px rgba(0,0,0,0.4),
+    -1px -1px 2px rgba(0,0,0,0.4),
+    1px -1px 2px rgba(0,0,0,0.4),
+    -1px 1px 2px rgba(0,0,0,0.4);
 }
 
 .service-section li::marker {
@@ -343,6 +363,11 @@ h4 {
   content: "\2740";
   color: var(--light-highlight-color);
 }
+
+#packages {
+  background-color: var(--off-white-backgrounds);
+}
+
 
 /* ---------------------------------------------------About Me Page*/
 
