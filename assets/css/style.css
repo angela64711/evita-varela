@@ -24,6 +24,7 @@
 
 /* -----------------------------------------------Global Styles */
 
+
 html,
 body {
   height: 100%;
@@ -290,16 +291,16 @@ h4 {
 
 #services p,
 .service-section p {
-  line-height: 1.6;  
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .service-section {
   /*makes sure the content of each service section isn't hidden behind the fixed navbar when linking from the home page cards*/
   scroll-margin-top: 64px;
-  
+
   align-items: center;
-   /* spacing between text and image */
+  /* spacing between text and image */
 }
 
 .service-text {
@@ -318,18 +319,22 @@ h4 {
 }
 
 .service-picture img {
-  filter: grayscale(100%); /* keep it grayscale */
+  filter: grayscale(100%);
+  /* keep it grayscale */
 }
 
 .service-title-overlay {
   position: absolute;
-  bottom: 10%; /* 10% from the bottom of the image */
-  left: 50%; /* horizontally center */
+  bottom: 10%;
+  /* 10% from the bottom of the image */
+  left: 50%;
+  /* horizontally center */
   transform: translateX(-50%);
-  font-size: clamp(3rem, 10vw, 5rem); /*lets the font scale between a minimum and maximum depending on the viewport width*/
-  color: white; 
+  font-size: clamp(3rem, 10vw, 5rem);
+  /*lets the font scale between a minimum and maximum depending on the viewport width*/
+  color: white;
   font-weight: bold;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   z-index: 10;
 }
 
@@ -369,14 +374,7 @@ h4 {
 /* -----------------------------------------------------------------Footer */
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   padding: 1rem 0;
-  gap: 1.5rem;
   background-color: var(--light-highlight-color);
   -webkit-box-shadow: 0 -1px 6px var(--primary-color);
   box-shadow: 0 -1px 6px var(--primary-color);
@@ -391,10 +389,34 @@ h4 {
   color: var(--highlight-color);
 }
 
+/*----------------------------------------------Modal and Accordion*/
+
 #modal-button:hover {
   background-color: var(--highlight-color);
   color: var(--secondary-color);
 }
+
+/* FAQ question text */
+.accordion-button {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* FAQ answer text */
+.accordion-body p {
+  color: var(--primary-color);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--light-highlight-color-rgb), 0.25);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--light-highlight-color);
+  color: var(--secondary-color);
+}
+
+
 /* ----------------------------------------------------------------------------Media Queries */
 
 /* Medium devices (tablets, 768px and up) */
