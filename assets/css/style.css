@@ -37,6 +37,11 @@ body {
   padding-top: 60px;
 }
 
+p, li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
 /*overrides the default black text by bootstrap*/
 p,
 li,
@@ -44,11 +49,6 @@ label,
 input,
 textarea {
   color: var(--secondary-color);
-}
-
-body>footer {
-  position: sticky;
-  top: 100%;
 }
 
 /*stabilizes width, prevents layout from expanding*/
@@ -75,15 +75,15 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem); /* min, preferred, max */
+  font-size: clamp(2.2rem, 4.5vw, 3rem); /* min, preferred, max */
 }
 
 h2 {
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-size: clamp(1.8rem, 3.8vw, 2.2rem);
 }
 
 h3 {
-  font-size: clamp(1.2rem, 3vw, 1.75rem);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
 h4 {
@@ -160,10 +160,9 @@ h4 {
   /* removes any Bootstrap shadow */
 }
 
-/* -----------------------------------------------Main Content */
+/* ----------------------------------------------------Main Content */
 
-/* -------------------------------------------------Hero Section */
-
+/* -----------------------------------------------Hero Section */
 
 #hero-content {
   max-width: 580px;
@@ -398,6 +397,11 @@ h4 {
 
 /* -----------------------------------------------------------------Footer */
 
+body>footer {
+  position: sticky;
+  top: 100%;
+}
+
 .footer {
   padding: 1rem 0;
   background-color: var(--light-highlight-color);
@@ -416,9 +420,16 @@ h4 {
 
 /*----------------------------------------------Modal and Accordion*/
 
+#modal-button {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
 #modal-button:hover {
   background-color: var(--highlight-color);
   color: var(--secondary-color);
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 /* FAQ question text */
