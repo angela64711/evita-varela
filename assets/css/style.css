@@ -1,6 +1,6 @@
 /* Google Fonts Import */
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bilbo&family=Calligraffitti&family=Merienda:wght@300..900&family=Shadows+Into+Light+Two&family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 /* CSS Variables */
 
@@ -23,7 +23,6 @@
 }
 
 /* -----------------------------------------------Global Styles */
-
 
 html,
 body {
@@ -48,7 +47,7 @@ li,
 label,
 input,
 textarea {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /*stabilizes width, prevents layout from expanding*/
@@ -275,11 +274,6 @@ h4 {
   padding-left: 2rem;
 }
 
-#about-preview-text h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
 #about-preview-text p {
   margin-bottom: 1rem;
   line-height: 1.7;
@@ -295,9 +289,36 @@ h4 {
   border: 1.5px solid var(--secondary-color);
 }
 
+
+/*--------------------------------------------------------Testimonials*/
+
+#home-page-testimonial {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.testimonial-quote {
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  display: block;
+  line-height: 1;
+  margin-bottom: -0.5rem;
+}
+
+.testimonial-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-family: var(--secondary-font); 
+  
+}
+
 /*---------------------------------------------------Featured section on home page*/
 
 #featured {
+  background-color: var(--off-white-backgrounds);
   padding: 2rem 0;
 }
 
