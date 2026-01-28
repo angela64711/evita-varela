@@ -10,8 +10,8 @@
   --primary-color: #3a335c;
   /*dark purple for text*/
   --secondary-color: #5e39a7;
-  /*#62568a*/
-  /*dusty grape*/
+  --secondary-color-rgb: 94, 57, 167;
+   /*dusty grape*/
   --highlight-color: #faf4f0;
   /*soft blush*/
   --light-highlight-color: #bfcfc6;
@@ -420,6 +420,12 @@ h4 {
   background-color: var(--off-white-backgrounds);
 }
 
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.4rem rgba(var(--secondary-color-rgb), 0.25);
+ }
+
 /* -----------------------------------------------------------------Footer */
 
 body>footer {
@@ -437,6 +443,7 @@ body>footer {
 .footer a {
   color: var(--secondary-color);
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .footer a:hover {
