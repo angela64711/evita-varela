@@ -31,9 +31,6 @@ body {
 
 body {
   font-family: var(--primary-font);
-  /*pushes the content down under the navbar, which is fixed to the top.
-  Adjusted for the shorter navbar on mobile view*/
-  padding-top: 60px;
 }
 
 p, li {
@@ -330,12 +327,21 @@ h4 {
   margin-bottom: 1.5rem;
 }
 
+.services-line {
+  display: none; /* hide by default on mobile */
+}
+
 .service-section {
   /*makes sure the content of each service section isn't hidden behind the fixed navbar when linking from the home page cards*/
   scroll-margin-top: 64px;
-
   align-items: center;
   /* spacing between text and image */
+}
+
+#birth-service,
+#fertility-service {
+  background-color: var(--off-white-backgrounds);
+  padding: 1rem 0;
 }
 
 .service-text {
@@ -492,6 +498,10 @@ body>footer {
 @media screen and (min-width: 768px) {
   #doula-home-pic {
     min-height: 400px;
+  }
+
+  .services-line {
+    display: block; /* show on tablet and larger */
   }
 }
 
